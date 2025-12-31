@@ -27,10 +27,19 @@ export default function SkillDetail({ params }: { params: { slug: string } }) {
     return parts.map((part, i) => {
       const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
       if (linkMatch) {
+        const href = linkMatch[2] as string;
+        const isExternal = href.startsWith("http") || href.endsWith(".pdf");
+        if (isExternal) {
+          return (
+            <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="font-medium text-indigo-600 hover:underline dark:text-indigo-400">
+              {linkMatch[1]}
+            </a>
+          );
+        }
         return (
-          <Link key={i} href={linkMatch[2] as string} className="font-medium text-indigo-600 hover:underline dark:text-indigo-400">
+          <a key={i} href={href} className="font-medium text-indigo-600 hover:underline dark:text-indigo-400">
             {linkMatch[1]}
-          </Link>
+          </a>
         );
       }
       return part.split(/(\*\*.*?\*\*)/g).map((subPart, j) => {

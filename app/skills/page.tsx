@@ -60,13 +60,13 @@ export default function SkillsPage() {
               A synthetic overview of my technical and human skills, compared by proficiency level and detailed through concrete professional and personal experiences.
             </p>
 
-            <Link
-            href={"/DIMA-TALLAACV-Resume.pdf" as string}
+            <a
+            href="/DIMA-TALLAACV-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2 font-medium text-white hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-slate-200">
               Download CV
-            </Link>
+            </a>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             {/* Tabs */}

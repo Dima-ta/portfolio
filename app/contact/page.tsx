@@ -171,7 +171,7 @@ export default function ContactPage() {
           {/* social / links */}
           <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {profile.links?.map((l) => (
-              <Link
+              <a
                 key={l.href}
                 href={l.href}
                 target="_blank"
@@ -180,7 +180,7 @@ export default function ContactPage() {
               >
                 {iconFor(l.label)}
                 {l.label}
-              </Link>
+              </a>
             ))}
           </div>
         </div>

@@ -67,13 +67,14 @@ export default function TimelinePage() {
             style={{ textShadow: "0 3px 8px rgba(0,0,0,0.6)" }}>
             A reverse-chronological overview of my professional journey and key milestones.
           </p>
-          <Link
+          <a
             href="/DIMA-TALLAACV-Resume.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 inline-flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2 font-medium text-white hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-slate-200"
           >
             Download CV
-          </Link>
+          </a>
 
           {/* Filter tabs */}
           <div className="mt-4 inline-flex overflow-hidden rounded-xl border border-slate-200 bg-white/80 shadow-sm backdrop-blur dark:border-slate-700 dark:bg-slate-900/70">
@@ -148,7 +149,7 @@ function TimelineBlock({ item, index }: { item: (typeof timeline)[number]; index
                 <Icon className="h-12 w-12 text-slate-400 dark:text-slate-500" />
               </div>
             ) : item.links?.[0]?.href ? (
-              <Link
+              <a
                 href={item.links[0].href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -161,7 +162,7 @@ function TimelineBlock({ item, index }: { item: (typeof timeline)[number]; index
                   height={144}
                   className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
                 />
-              </Link>
+              </a>
             ) : (
               <Image
                 src={item.logo}

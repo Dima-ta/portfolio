@@ -103,7 +103,7 @@ export default function ProjectDetail({ params }: { params: { slug: string }}) {
                 );
 
                 return (
-                  <Link
+                  <a
                     key={tech}
                     href={(hasProof ? `/skills/${skill.slug}#${project.slug}` : `/skills/${skill.slug}`) as string}
                     className="group flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50/50 px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:bg-white hover:shadow-sm hover:ring-1 hover:ring-slate-200 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:ring-slate-700"
@@ -112,7 +112,7 @@ export default function ProjectDetail({ params }: { params: { slug: string }}) {
                       <skill.icon className="h-4 w-4 text-slate-400 transition-colors group-hover:text-indigo-500 dark:text-slate-500 dark:group-hover:text-indigo-400" />
                     )}
                     <span>{tech}</span>
-                  </Link>
+                  </a>
                 );
               }
               return (
