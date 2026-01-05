@@ -82,7 +82,7 @@ export const timeline: TimelineItem[] = [
     period: "2019",
     title: "Driving License (Permis B)",
     place: "France",
-    logo: "/logos/driving-license.jpg",
+    logo: "/logos/driving-licence.jpg",
     summary: "Obtained European driving license.",
   },
   {
