@@ -10,7 +10,7 @@ const iconMap = {
 export function Footer() {
   return (
     <footer className="mt-16 border-t border-slate-200 bg-white/50 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/50">
-      <div className="container mx-auto grid w-full grid-cols-2 gap-6 px-4 py-8">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-2 gap-6 py-8">
         <div>
           <div className="font-semibold text-slate-900 dark:text-slate-100">{profile.name}</div>
           <div className="text-sm text-slate-600 dark:text-slate-400">{profile.title}</div>

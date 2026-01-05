@@ -21,15 +21,14 @@ export function Hero() {
     <section
       className="
         relative flex items-center min-h-[80vh] md:min-h-[90vh]
-        bg-[url('/bg.jpg')] bg-cover bg-center
       "
     >
       <div
-        className="absolute inset-0 bg-black/50"
+        className="absolute inset-0 bg-black/60"
         aria-hidden="true"
       />
 
-      <div className="relative container">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-[auto,1fr] md:items-center">
           <motion.div
             className="flex justify-center md:justify-start"
@@ -58,7 +57,7 @@ export function Hero() {
               "
               style={{ textShadow: "0 4px 10px rgba(0,0,0,0.8)" }}
             >
-              <span className="block text-5xl md:text-6xl">{name}</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl">{name}</span>
               <span className="mt-2 block text-3xl font-semibold md:text-4xl">
                 {titleTop} / {titleBottom}
               </span>
@@ -68,7 +67,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-6 flex gap-4 justify-center md:justify-start"
+              className="mt-6 flex flex-col gap-6 sm:flex-row sm:gap-8 items-stretch sm:items-center justify-center md:justify-start"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}

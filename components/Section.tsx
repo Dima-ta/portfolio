@@ -15,7 +15,7 @@ export function Section({
 }) {
   return (
     <section id={id} className={cn("py-16", background === "default" && "bg-white")}>
-      <div className="container">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6 text-center">
           <h2 className="text-2xl font-bold">{title}</h2>
           {subtitle && <p className="mt-1 text-sm text-slate-600">{subtitle}</p>}

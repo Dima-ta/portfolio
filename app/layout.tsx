@@ -12,12 +12,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dima-tallaa.vercel.app"),
   title: "Dima TALLAA _ Software Engineer / Full-stack Developer",
   description: "Professional portfolio built with Next.js and TailwindCSS.",
   openGraph: {
     title: "Dima TALLAA _ Software Engineer / Full-stack Developer",
     description: "Professional portfolio built with Next.js and TailwindCSS.",
-    url: "https://your-domain.com",
+    url: "https://dima-tallaa.vercel.app",
     siteName: "Portfolio",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
     locale: "en_US",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body suppressHydrationWarning={true} className={`${inter.className} ${poppins.variable} flex min-h-screen flex-col bg-transparent`}>
+      <body suppressHydrationWarning={true} className={`${inter.className} ${poppins.variable} flex min-h-screen flex-col bg-transparent overflow-x-hidden`}>
         <div className="pointer-events-none fixed inset-0 -z-20">
           <BackgroundManager />
         </div>
