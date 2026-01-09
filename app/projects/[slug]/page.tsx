@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Section } from "@/components/Section";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
-import { ProjectGallery } from "./ProjectGallery";
 import { ProjectNavigation } from "@/components/ProjectNavigation";
 import { projects } from "@/data/projects";
 import { skills } from "@/data/skills";
@@ -65,10 +64,34 @@ export default function ProjectDetail({ params }: { params: { slug: string }}) {
           ))}
         </ul>
 
+        {project.criticalReflection && (
+          <>
+            <h3 className="mt-8 text-xl font-semibold">Critical Reflection</h3>
+            <p className="whitespace-pre-line leading-relaxed">{project.criticalReflection}</p>
+          </>
+        )}
+
         {project.gallery && (
           <>
             <h3 className="mt-8 text-xl font-semibold">Gallery</h3>
-            <ProjectGallery gallery={project.gallery} />
+            <div className="not-prose mt-6 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
+              {project.gallery.map((img, idx) => (
+                <figure key={idx} className="group relative flex w-[85vw] shrink-0 snap-center flex-col gap-2 sm:w-[480px]">
+                  <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-700">
+                    <Image
+                      src={img.src}
+                      alt={img.description}
+                      fill
+                      className="object-contain transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 85vw, 480px"
+                    />
+                  </div>
+                  <figcaption className="text-center text-sm text-slate-600 dark:text-slate-400">
+                    {img.description}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </>
         )}
 

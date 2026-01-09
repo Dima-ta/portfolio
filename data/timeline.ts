@@ -9,6 +9,8 @@ export type TimelineItem = {
   summary?: string;            // short one-liner (1st-level reading)
   bullets?: string[];          // detailed points (2nd-level reading on hover/focus)
   links?: { label: string; href: string }[];
+  relatedProjectSlugs?: string[];
+  skills?: string[];
 };
 
 export const timeline: TimelineItem[] = [
@@ -28,6 +30,8 @@ export const timeline: TimelineItem[] = [
       "Developed a PLM task-tracking tool with a Sankey graph; delivered Excel reports; real-time online monitoring linked to PLM.",
       "Handled user issues, implemented fixes, ensured timely deliveries."
     ],
+    relatedProjectSlugs: ["interconnect-error-checker", "plm-task-tracking"],
+    skills: ["Python", "Data Analysis", "Excel Integration", "PLM", "Visualization"],
     links: [{ label: "Company", href: "https://www.gevernova.com" }],
   },
   {
@@ -43,6 +47,8 @@ export const timeline: TimelineItem[] = [
       "Architecture & Testing: SOLID, UML, Security, Big Data, NoSQL, DevOps",
       "Project management: Agile/Scrum, Design Thinking, Team leadership"
     ],
+    relatedProjectSlugs: ["pmt-project-management-tool", "innotechfusion", "portfolio-website"],
+    skills: ["Angular", "Spring Boot", "Docker", "Kubernetes", "CI/CD", "Architecture"],
     links: [{ label: "University", href: "https://www.iscod.fr/" }],
   },
   // 2019 - 2023
@@ -59,6 +65,7 @@ export const timeline: TimelineItem[] = [
       "Databases: UML, Oracle PL/SQL",
       "CS: Data structures & algorithms (C), OOP (Java), Git"
     ],
+    skills: ["Java", "C", "PHP", "SQL", "Git", "UML"],
     links: [{ label: "University", href: "https://www.unistra.fr" }],
   },
   // 2018 - 2019
@@ -74,6 +81,7 @@ export const timeline: TimelineItem[] = [
       "Programs: Young Digital Citizens, Cinema & Citizenship",
       "Community engagement & teamwork"
     ],
+    skills: ["Teamwork", "Communication"],
     links: [{ label: "Website", href: "https://www.uniscite.fr/" }],
   },
   {
@@ -104,6 +112,7 @@ export const timeline: TimelineItem[] = [
     logo: "/logos/utbm.png",
     summary: "C/C++ and SQL projects (Crunch Time).",
     bullets: ["Projects in C & C++", "Databases (SQL)", "Project: Crunch Time"],
+    skills: ["C", "C++", "SQL"],
     links: [{ label: "UTBM", href: "https://www.utbm.fr" }],
   },
   {
@@ -114,6 +123,7 @@ export const timeline: TimelineItem[] = [
     place: "Cisco Networking",
     logo: "/logos/cisco.jpg",
     summary: "Foundations in networking (routing/switching).",
+    skills: ["Networking", "Cisco IOS", "Routing & Switching"],
     links: [{ label: "Website", href: "https://www.cisco.com/site/fr/fr/index.html" }],
   },
   // 2013 - 2016
@@ -131,6 +141,7 @@ export const timeline: TimelineItem[] = [
       "Circuit drawing with PROTEUS",
       "MATLAB simulations"
     ],
+    skills: ["MATLAB", "Proteus", "HTML", "JavaScript", "Electronics"],
     links: [{ label: "University", href: "https://en.feng.bu.edu.eg" }],
   },
 ];

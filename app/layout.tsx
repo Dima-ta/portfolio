@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <BackgroundManager />
         </div>
         <Header />
-        <main className="flex-1 bg-transparent">
+        <main className="flex-1 bg-transparent pt-16">
           <PageTransition>{children}</PageTransition>
         </main>
         <Footer />

@@ -10,6 +10,7 @@ export type Project = {
   objectives: string[];
   features: string[]; 
   outcomes: string[];
+  criticalReflection?: string;
   links?: { label: string; href: string }[];
   stack: string[];
 };
@@ -42,6 +43,7 @@ export const projects: Project[] = [
       "Learned how to combine Python data analysis with a simple user interface to make technical tools accessible to non-technical users.",
       "Strengthened experience in automation, reporting, and KPI tracking for real-world engineering workflows.",
     ],
+    criticalReflection: "One limitation of this project was the tight coupling between validation rules and data formats. \nIn future iterations, I would externalize business rules to improve maintainability and adaptability. \nThis project taught me the importance of balancing technical robustness with long-term evolvability.",
     stack: ["Python", "Excel Integration", "Data Analysis & Visualization", "Git", "MySQL", "Data Modeling", "Documentation", "Clean Architecture", "Continuous Learning & Adaptability", "Teamwork & Communication", "Problem Solving & Analytical Thinking"],
     gallery: [
       {
@@ -106,6 +108,7 @@ export const projects: Project[] = [
       "Strengthened skills in Python, data visualization, PLM integration, and effective communication with stakeholders.",
       "Delivered a reusable tool that integrates seamlessly into daily workflows.",
     ],
+    criticalReflection: "One limitation of this tool is that task dependencies are manually defined, which may introduce human error. \nIn future versions, I would integrate automated consistency checks and a more interactive visualization. \nThis project helped me better understand the complexity of dependency management in real-world systems.",
     stack: ["Python", "Sankey Visualization (Plotly/Matplotlib)", "Data Modeling", "Documentation", "Clean Architecture", "Continuous Learning & Adaptability", "Teamwork & Communication", "Problem Solving & Analytical Thinking"],
     gallery: [
       {
@@ -153,6 +156,7 @@ export const projects: Project[] = [
       "CI/CD automation ensuring reliable builds, tests, and deployments.",
       "Strong code quality with backend & frontend test coverage ≥ 60%."
     ],
+    criticalReflection: "One challenge in this project was balancing flexibility with data integrity, especially when designing task relationships.\nIf I were to continue this project, I would add role-based access control, advanced reporting, and deployment automation.\nThis project strengthened my understanding of backend architecture and long-term maintainability.",
   
     stack: [
       "Angular",
@@ -164,7 +168,7 @@ export const projects: Project[] = [
       "Clean Architecture"
     ],
     links: [
-      { label: "Repository (GitLab)", href: "https://gitlab.com/dematallaa/plm.git" },
+      { label: "Repository (GitLab)", href: "https://gitlab.com/dematallaa/pmt_etude-de-cas" },
     ],
   },
   {
@@ -208,6 +212,7 @@ export const projects: Project[] = [
       "Improved delivery maturity through Docker Compose and CI automation (GitLab CI).",
       "Produced professional documentation (architecture + README + SQL seed), making the project easy to run and assess.",
     ],
+    criticalReflection: "One challenge in this project was ensuring strict voting integrity while maintaining usability.\nDesigning database constraints and backend validation required careful trade-offs between flexibility and security.\nIf redesigned, I would introduce event-based auditing and more granular role management.",
   
     stack: [
       "Angular",
@@ -264,9 +269,10 @@ export const projects: Project[] = [
       "Software Engineering & Clean Architecture",
       "Vercel",
     ],
+    criticalReflection: "This project helped me consolidate my frontend architecture skills. One limitation was the initial lack of automated testing, which I plan to address in future iterations. If I were to restart the project, I would define a clearer content schema earlier to reduce refactoring.",
     links: [
-      { label: "Live", href: "https://your-portfolio-domain.com" },
-      { label: "GitHub", href: "https://github.com/your-user/your-portfolio-repo" },
+      { label: "Live", href: "https://dima-tallaa.vercel.app/" },
+      { label: "GitHub", href: "https://github.com/Dima-ta/portfolio/" },
     ],
   },
 ];

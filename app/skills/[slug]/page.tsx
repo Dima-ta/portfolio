@@ -338,7 +338,7 @@ export default function SkillDetail({ params }: { params: { slug: string } }) {
             <div>
               <h3 className="mb-4 flex items-center gap-2 font-semibold text-slate-900 dark:text-white">
                 <LinkIcon className="h-5 w-5 text-indigo-500" />
-                Réalisations rattachées
+                Related Projects
               </h3>
               <div className="flex flex-col gap-4">
                 {related.map((p) => (

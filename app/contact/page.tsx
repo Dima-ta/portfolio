@@ -129,14 +129,6 @@ export default function ContactPage() {
               >
                 Send Message
               </button>
-
-              {/* fallback mailto */}
-              <a
-                href={`mailto:${profile.email}?subject=Hello%20${encodeURIComponent(profile.name ?? "")}`}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200"
-              >
-                <Mail className="h-4 w-4" /> Email instead
-              </a>
             </div>
           </form>
         </div>

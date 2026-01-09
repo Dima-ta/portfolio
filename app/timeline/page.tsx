@@ -5,6 +5,8 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { timeline } from "@/data/timeline";
+import { projects } from "@/data/projects";
+import { skills } from "@/data/skills";
 import { Award, Briefcase, GraduationCap } from "lucide-react";
 
 // Filter tabs
@@ -117,6 +119,10 @@ function TimelineBlock({ item, index }: { item: (typeof timeline)[number]; index
   const Icon = typeIcons[item.type];
   const color = typeColors[item.type];
 
+  const relatedProjects = item.relatedProjectSlugs
+    ?.map((slug) => projects.find((p) => p.slug === slug))
+    .filter((p) => !!p);
+
   const side = index % 2 === 0 ? "md:justify-start" : "md:justify-end";
 
   return (
@@ -185,13 +191,13 @@ function TimelineBlock({ item, index }: { item: (typeof timeline)[number]; index
           </div>
 
           {/* Expanded details inside block */}
-          {(item.bullets?.length || item.links?.length) && (
+        {(item.bullets?.length || item.links?.length || item.skills?.length || relatedProjects?.length) && (
             <div
               className="
                 mt-3 max-h-0 overflow-hidden opacity-0
                 transition-all duration-500 ease-out
-                group-hover:max-h-[700px] group-hover:opacity-100
-                group-focus-within:max-h-[700px] group-focus-within:opacity-100
+              group-hover:max-h-[1000px] group-hover:opacity-100
+              group-focus-within:max-h-[1000px] group-focus-within:opacity-100
               "
             >
               <div className="rounded-xl border border-slate-200/70 bg-white/90 p-4 dark:border-slate-700 dark:bg-slate-900/80">
@@ -202,6 +208,51 @@ function TimelineBlock({ item, index }: { item: (typeof timeline)[number]; index
                     ))}
                   </ul>
                 ) : null}
+
+              {item.skills?.length ? (
+                <div className="mt-4 border-t border-slate-100 pt-3 dark:border-slate-800">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">Related Skills</p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.skills.map((skillName) => {
+                      const skill = skills.find((s) => s.name === skillName || s.slug === skillName);
+                      if (skill) {
+                        return (
+                          <Link
+                            key={skillName}
+                            href={`/skills/${skill.slug}`}
+                            className="rounded-md bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600 transition-colors hover:bg-blue-50 hover:text-blue-600 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400"
+                          >
+                            {skillName}
+                          </Link>
+                        );
+                      }
+                      return (
+                        <span key={skillName} className="rounded-md bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                          {skillName}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+              ) : null}
+
+              {relatedProjects?.length ? (
+                <div className="mt-4 border-t border-slate-100 pt-3 dark:border-slate-800">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">Related Projects</p>
+                  <div className="flex flex-col gap-2">
+                    {relatedProjects.map((p) => (
+                      <Link
+                        key={p!.slug}
+                        href={`/projects/${p!.slug}`}
+                        className="group/link flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400"
+                      >
+                        <span className="h-1.5 w-1.5 rounded-full bg-blue-500/50 group-hover/link:bg-blue-500"></span>
+                        {p!.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
 
                 {item.links?.length ? (
                   <div className="mt-3 flex flex-wrap gap-3">
