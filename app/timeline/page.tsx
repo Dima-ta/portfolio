@@ -191,7 +191,7 @@ function TimelineBlock({ item, index }: { item: (typeof timeline)[number]; index
           </div>
 
           {/* Expanded details inside block */}
-        {(item.bullets?.length || item.links?.length || item.skills?.length || relatedProjects?.length) && (
+        {(item.programDescription || item.bullets?.length || item.links?.length || item.skills?.length || relatedProjects?.length) && (
             <div
               className="
                 mt-3 max-h-0 overflow-hidden opacity-0
@@ -201,6 +201,11 @@ function TimelineBlock({ item, index }: { item: (typeof timeline)[number]; index
               "
             >
               <div className="rounded-xl border border-slate-200/70 bg-white/90 p-4 dark:border-slate-700 dark:bg-slate-900/80">
+                {item.programDescription && (
+                  <p className="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                    {item.programDescription}
+                  </p>
+                )}
                 {item.bullets?.length ? (
                   <ul className="list-disc space-y-1 pl-5 text-sm">
                     {item.bullets.map((b, i) => (

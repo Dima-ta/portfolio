@@ -68,7 +68,7 @@ export const skills: Skill[] = [
   },
   {
     slug: "backend-development",
-    name: "Backend Development (Java / Python / APIs)",
+    name: "Backend Development",
     domain: "technical",
     level: 4,
     tagline: "Designing reliable, scalable, and secure backend systems.",
@@ -101,7 +101,7 @@ export const skills: Skill[] = [
   },
   {
     slug: "frontend-development",
-    name: "Frontend Development (Angular / React / TypeScript)",
+    name: "Frontend Development",
     domain: "technical",
     level: 4,
     tagline: "Crafting responsive and intuitive user experiences.",

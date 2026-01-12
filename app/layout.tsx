@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     type: "website"
   },
   icons: {
-    icon: "/DT Logo/DT_logo.svg",
-    apple: "/DT Logo/apple-touch-icon.png",
+     icon: "/favicon.ico",
+    apple: "/DT-Logo/apple-touch-icon.png",
   },
 };
 

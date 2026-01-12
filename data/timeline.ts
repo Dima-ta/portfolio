@@ -7,6 +7,7 @@ export type TimelineItem = {
   place: string;               // e.g. "GE Vernova _ Belfort, France"
   logo?: string;               // optional /public logos
   summary?: string;            // short one-liner (1st-level reading)
+  programDescription?: string;
   bullets?: string[];          // detailed points (2nd-level reading on hover/focus)
   links?: { label: string; href: string }[];
   relatedProjectSlugs?: string[];
@@ -23,6 +24,7 @@ export const timeline: TimelineItem[] = [
     place: "GE Vernova — Belfort, France",
     logo: "/logos/ge-vernova.jpg",
     summary: "Automation & data quality tools, dashboards, KPIs, and PLM tracking.",
+    programDescription: "This apprenticeship immerses me in a high-stakes industrial environment where precision and efficiency are paramount. I am responsible for developing software solutions that automate complex data verification processes and provide real-time visibility into project KPIs, fostering a proactive approach to quality management.",
     bullets: [
       "Built a Python tool to automate interconnect cabling checks: improved data quality, FPY, efficiency, and OTD.",
       "Automated dashboards + weekly reports for error rates & trends across projects.",
@@ -42,6 +44,7 @@ export const timeline: TimelineItem[] = [
     place: "ISCOD — France",
     logo: "/logos/iscod.jpg",
     summary: "Advanced dev, architecture & testing, DevOps, Agile leadership.",
+    programDescription: "This program follows a professional and project-oriented pedagogy, closely aligned with real-world practices. Learning is structured around real-world use cases, software architecture, and quality standards. I particularly value this approach, as it develops autonomy, responsibility, and the ability to design scalable and maintainable software solutions.",
     bullets: [
       "Advanced: Angular, Spring, Kotlin, Docker, Kubernetes",
       "Architecture & Testing: SOLID, UML, Security, Big Data, NoSQL, DevOps",
@@ -60,6 +63,7 @@ export const timeline: TimelineItem[] = [
     place: "University of Strasbourg — France",
     logo: "/logos/unistra.png",
     summary: "MIPS, Web, DB (UML/PLSQL), DS & Algorithms, OOP, Git.",
+    programDescription: "The academic approach of this program emphasizes strong theoretical foundations in computer science, supported by practical work and structured projects. This balance between theory and practice helped me develop rigorous analytical thinking and a solid understanding of core computer science concepts.",
     bullets: [
       "Projects: MIPS; Web programming (HTML, CSS, JavaScript, PHP)",
       "Databases: UML, Oracle PL/SQL",
@@ -111,6 +115,7 @@ export const timeline: TimelineItem[] = [
     place: "UTBM — Belfort, France",
     logo: "/logos/utbm.png",
     summary: "C/C++ and SQL projects (Crunch Time).",
+    programDescription: "This engineering program is based on a project-centered pedagogy, encouraging experimentation, teamwork, and problem-solving. The learning approach combines technical courses with concrete projects, promoting autonomy, adaptability, and an engineering mindset focused on practical solutions.",
     bullets: ["Projects in C & C++", "Databases (SQL)", "Project: Crunch Time"],
     skills: ["C", "C++", "SQL"],
     links: [{ label: "UTBM", href: "https://www.utbm.fr" }],
@@ -135,6 +140,7 @@ export const timeline: TimelineItem[] = [
     place: "Faculty of Engineering at Shoubra — Cairo, Egypt",
     logo: "/logos/shoubra.jpg",
     summary: "Electronics/Comms; MATLAB, Proteus; Robotics; HTML/JS.",
+    programDescription: "The Faculty of Engineering at Shoubra provided me with a solid foundation in electrical engineering, with a focus on electronics and telecommunications. The program combined theoretical principles with practical coursework, fostering analytical thinking and technical rigor that later supported my transition toward software and systems engineering.",
     bullets: [
       "HTML & JavaScript programming",
       "Power source & Robot projects",

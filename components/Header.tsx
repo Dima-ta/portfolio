@@ -26,11 +26,11 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
           <div className="relative h-10 w-10 rounded-full overflow-hidden">
             <Image
-              src="/DT Logo/DT_logo_original.png" 
-              alt="Logo"
+              src={avatar}
+              alt={profile.name}
               fill
               sizes="40px"
-              className="object-contain"
+              className="object-cover"
               priority
             />
             </div>

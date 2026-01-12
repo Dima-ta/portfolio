@@ -238,7 +238,7 @@ export const projects: Project[] = [
     year: "2025",
     presentation:
       "A modern personal portfolio built with Next.js to showcase projects, skills, and a reverse-chronological timeline. The site is designed with a strong focus on clarity, structure, and long-term maintainability, making it suitable for both academic evaluation and professional interviews.",
-    logo: "/DT Logo/DT_logo_original.png",
+    logo: "/DT-Logo/DT_logo_original.png",
     context:
       "This portfolio was developed as my capstone project for the ISCOD Mastère 2 _ Expert en Ingénierie Logicielle. \nI designed and implemented the entire website end-to-end, from architecture and content structure to UI, navigation, and component design, using Next.js, TypeScript, and Tailwind CSS.\n\n A key goal of this project was to create a portfolio that is not only visually clean, but also engineered as a scalable application: projects, timeline entries, and skills can be extended easily without breaking the overall structure.",
     objectives: [
