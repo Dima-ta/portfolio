@@ -35,34 +35,31 @@ export default function ProjectDetail({ params }: { params: { slug: string }}) {
         <p className="whitespace-pre-line leading-relaxed">{project.context}</p>
 
         <h3 className="mt-8 text-xl font-semibold">Objectives</h3>
-        <ul className="not-prose mt-4 space-y-3">
-          {project.objectives.map((o, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-slate-400 dark:text-slate-500" />
-              <span className="leading-relaxed">{o}</span>
-            </li>
-          ))}
-        </ul>
+        <p className="whitespace-pre-line leading-relaxed">
+          {project.objectives}
+        </p>
 
         <h3 className="mt-8 text-xl font-semibold">Key Features</h3>
-        <ul className="not-prose mt-4 space-y-3">
-          {project.features.map((s, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-slate-400 dark:text-slate-500" />
-              <span className="leading-relaxed">{s}</span>
-            </li>
-          ))}
-        </ul>
+        <p className="whitespace-pre-line leading-relaxed">
+          {project.features}
+        </p>
 
         <h3 className="mt-8 text-xl font-semibold">Outcomes & Learnings</h3>
-        <ul className="not-prose mt-4 space-y-3">
-          {project.outcomes.map((r, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-slate-400 dark:text-slate-500" />
-              <span className="leading-relaxed">{r}</span>
-            </li>
-          ))}
-        </ul>
+        <p className="whitespace-pre-line leading-relaxed">
+          {project.outcomes}
+        </p>
+
+        {project.collaboration && (
+          <>
+            <h3 className="mt-8 text-xl font-semibold">
+              Collaboration & Interactions
+            </h3>
+
+            <p className="whitespace-pre-line leading-relaxed">
+              {project.collaboration}
+            </p>
+          </>
+        )}
 
         {project.criticalReflection && (
           <>
