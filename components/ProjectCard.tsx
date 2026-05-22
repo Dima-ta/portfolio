@@ -44,10 +44,13 @@ export function ProjectCard({ project }: { project: Project }) {
       {/* Back of the card (visible on hover) */}
       <div className="absolute inset-0 flex flex-col rounded-2xl p-10 opacity-0 transition-opacity group-hover:opacity-100">
         <div>
-          <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Key Features</h4>
-          <ul className="mt-1 list-disc pl-4 text-xs text-slate-600 dark:text-slate-400">
-            {project.features.slice(0, 3).map(obj => <li key={obj}>{obj}</li>)}
-          </ul>
+          <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+            Key Features
+          </h4>
+
+          <p className="mt-1 text-xs leading-relaxed text-slate-600 line-clamp-4 dark:text-slate-400">
+            {project.features}
+          </p>
         </div>
         <div className="mt-3">
           <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Technologies</h4>
